@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# FAISS index files (auto-generated, can be rebuilt)
+faiss_indexes/
+
+# Streamlit cache
+.streamlit/
+
+# Logs
+*.log
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Backup files
+*.bak
+*.swp
