@@ -1,115 +1,102 @@
-
-DEMO VIDEO LINK - https://drive.google.com/file/d/1ycbKrYXiXhbPhS4T9ffZnU-8iTVmRBkD/view?usp=sharing
-
-## 🚀 STEP-BY-STEP: Deploy Project to GitHub
-
-### 🧩 1. Initialize Git in your project folder
-
-Open the terminal in the root of your project (where `.gitignore` and `requirements.txt` are):
-
-```bash
-git init
-```
-
-This creates a local Git repository.
-
----
-
-### 🧹 2. Add all files (except the ones in `.gitignore`)
-
-```bash
-git add .
-```
-
----
-
-### 📝 3. Commit the code
-
-```bash
-git commit -m "Initial commit - AI DSA Assistant"
-```
-
----
-
-### 🌐 4. Create a new GitHub repository
-
-Go to 👉 [https://github.com/new](https://github.com/new)
-
-* Repository name: `AI-DSA-Assistant`
-* Description: “An AI-powered DSA code assistant using Gemini and FAISS”
-* Keep it **Public**
-* Don’t add a README (we’ll push ours)
-
-Click **Create repository**.
-
----
-
-### 🔗 5. Connect your local repo to GitHub
-
-After creating it, GitHub shows some commands — use these:
-
-```bash
-git remote add origin https://github.com/<your-username>/AI-DSA-Assistant.git
-git branch -M main
-git push -u origin main
-```
-
-Example:
-
-```bash
-git remote add origin https://github.com/Devamsingh09/AI-DSA-Assistant.git
-git branch -M main
-git push -u origin main
-```
-
----
-
-### ✅ 6. Confirm
-
-Go to your GitHub repo URL — your files should now appear there!
-
----
-
-## ⚙️ Optional but Recommended
-
-### Add README.md
-
-Create a simple `README.md` at the project root:
-
-````markdown
 # 💡 AI DSA Assistant
 
-A RAG-based DSA code generator using LangChain, Gemini, and FAISS.  
-Uploads DSA PDFs, indexes them, and generates structured solutions (Brute Force → Improved → Optimal).
+[![Demo Video](https://img.shields.io/badge/Demo-Video-red)](https://drive.google.com/file/d/1ycbKrYXiXhbPhS4T9ffZnU-8iTVmRBkD/view?usp=sharing)
 
-### 🛠️ Tech Stack
-- Python 3.10+
-- Streamlit
-- LangChain
-- Google Gemini API
-- FAISS
+A RAG-based DSA code generator using LangChain, Gemini, and FAISS with hybrid search (BM25 + FAISS Ensemble). Uploads DSA PDFs, indexes them, and generates structured solutions (Brute Force → Improved → Optimal).
 
-### ▶️ Run Locally
+## 📹 Demo Video
+
+[Watch the demo video here](https://drive.google.com/file/d/1ycbKrYXiXhbPhS4T9ffZnU-8iTVmRBkD/view?usp=sharing)
+
+## 🛠️ Tech Stack
+
+- **Python 3.10+**
+- **Streamlit** - Web UI
+- **LangChain** - RAG framework
+- **Google Gemini API** - LLM for code generation
+- **FAISS** - Vector database for semantic search
+- **BM25** (via rank_bm25) - Keyword-based search
+- **Ensemble Retriever** - Hybrid search combining BM25 and FAISS
+
+## 🚀 Features
+
+- **Hybrid Search**: Combines keyword-based (BM25) and semantic-based (FAISS) retrieval for improved accuracy
+- **Multi-Language Support**: Supports C++, Java, and Python DSA problems
+- **Structured Solutions**: Generates three approaches - Brute Force, Improved, and Optimal
+- **RAG Pipeline**: Uses relevant context from DSA PDFs to generate accurate solutions
+- **Streamlit UI**: Clean and intuitive web interface
+
+## ▶️ Run Locally
+
+### Prerequisites
+
+- Python 3.10 or higher
+- Google Gemini API key
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Devamsingh09/AI-DSA-Assistant.git
+cd AI-DSA-Assistant
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
-streamlit run app/main.py
-````
-
-### ⚡ Environment Variables
-
 ```
+
+3. Set up environment variables:
+```bash
+# Create a .env file in the root directory
 GOOGLE_API_KEY=your_api_key_here
 ```
 
-````
-
----
-
-### To push updates later
-Whenever you make new changes:
-
+4. Run the application:
 ```bash
-git add .
-git commit -m "Updated main logic / UI"
-git push
-````
+streamlit run main.py
+```
+
+The app will be available at `http://localhost:8501`
+
+## 📁 Project Structure
+
+```
+AI-DSA-Assistant/
+├── app/
+│   ├── indexer.py      # Creates FAISS and BM25 indexes
+│   ├── rag_engine.py   # Hybrid search implementation
+│   └── setup.py        # Configuration and constants
+├── data/
+│   └── pdfs/           # DSA PDF documents
+├── faiss_indexes/      # Generated vector indexes
+├── main.py             # Streamlit application
+├── requirements.txt    # Python dependencies
+└── README.md
+```
+
+## 🔧 How It Works
+
+1. **Indexing**: PDFs are loaded, split into chunks, and indexed using both FAISS (semantic) and BM25 (keyword-based)
+2. **Hybrid Retrieval**: Ensemble Retriever combines results from both BM25 and FAISS with equal weights
+3. **Context Generation**: Top relevant chunks are retrieved and used as context
+4. **Code Generation**: Google Gemini generates structured solutions using the retrieved context
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- LangChain for the RAG framework
+- Google for the Gemini API
+- FAISS for efficient vector search
+- Streamlit for the web interface
