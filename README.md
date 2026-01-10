@@ -1,6 +1,6 @@
 # 💡 AI DSA Assistant
 # Flow Diagram
-<img width="2560" height="1664" alt="Gemini_Generated_Image_8teojf8teojf8teo" src="https://github.com/user-attachments/assets/cb263ac5-0eba-41ad-967c-a88708b8e4de" />
+<img width="1160" height="764" alt="Gemini_Generated_Image_8teojf8teojf8teo" src="https://github.com/user-attachments/assets/cb263ac5-0eba-41ad-967c-a88708b8e4de" />
 
 ## Demo Video
 [![Demo Video](https://img.shields.io/badge/Demo-Video-red)](https://drive.google.com/file/d/1ycbKrYXiXhbPhS4T9ffZnU-8iTVmRBkD/view?usp=sharing)
