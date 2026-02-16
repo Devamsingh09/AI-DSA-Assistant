@@ -7,7 +7,7 @@
 # Flow Diagram
 
 
-<img width="1160" height="664" alt="Gemini_Generated_Image_8b5v0p8b5v0p8b5v" src="https://github.com/user-attachments/assets/bc811bcc-3159-45d1-b0dc-976db4793063" />
+<img width="960" height="464" alt="Gemini_Generated_Image_8b5v0p8b5v0p8b5v" src="https://github.com/user-attachments/assets/bc811bcc-3159-45d1-b0dc-976db4793063" />
 
 ## Demo Video
 
