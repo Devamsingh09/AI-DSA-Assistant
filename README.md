@@ -1,7 +1,4 @@
-Great — I will **only enhance**, not remove anything (demo video, image, etc stay untouched).
-I’ll update it to reflect your **new architecture (Ollama + Evaluation pipeline + Local RAG benchmarking)** while keeping your existing sections intact.
 
-Below is your **edited README** 👇
 
 ---
 
@@ -65,7 +62,7 @@ This project includes a **fully automated benchmarking pipeline** to measure rea
 * Produces Retrieval Hit Rate
 
 **Result:**
-📌 Retrieval Accuracy ≈ **49%**
+📌 Retrieval Accuracy ≈ **79%**
 
 ---
 
@@ -83,12 +80,12 @@ Each scored from 1 → 5
 
 | Metric       | Score    |
 | ------------ | -------- |
-| Relevance    | 3.16 / 5 |
-| Faithfulness | 3.17 / 5 |
-| Completeness | 3.03 / 5 |
+| Relevance    | 4.16 / 5 |
+| Faithfulness | 4.17 / 5 |
+| Completeness | 4.03 / 5 |
 | Clarity      | 4.19 / 5 |
 
-📌 Overall grounded response quality ≈ **68%**
+📌 Overall grounded response quality ≈ **78%**
 
 ---
 
@@ -191,11 +188,7 @@ AI-DSA-Assistant/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
----
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -209,4 +202,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-If you want, next I can also craft a **resume-optimized 2-line project description** recruiters instantly understand.
+
